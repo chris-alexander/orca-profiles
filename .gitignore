@@ -1,0 +1,28 @@
+# OS junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs / temp
+*.log
+tmp/
+temp/
+
+# Just in case someone exports the whole Orca folder by mistake
+user/
+default/
+cache/
+caches/
+logs/
+log/
+thumbnail/
+thumbnails/
+
+# PowerShell / Bash artifacts
+*.bak
+*.orig

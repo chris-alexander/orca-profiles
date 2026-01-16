@@ -1,0 +1,25 @@
+{
+    "close_fan_the_first_x_layers": [
+        "3"
+    ],
+    "filament_flow_ratio": [
+        "0.955"
+    ],
+    "filament_max_volumetric_speed": [
+        "13"
+    ],
+    "filament_settings_id": [
+        "Prusa Generic PLA @Kuma"
+    ],
+    "from": "User",
+    "inherits": "Prusa Generic PLA @MK3.5",
+    "is_custom_defined": "0",
+    "name": "Prusa Generic PLA @Kuma",
+    "nozzle_temperature": [
+        "200"
+    ],
+    "pressure_advance": [
+        "0.05"
+    ],
+    "version": "2.2.0.4"
+}

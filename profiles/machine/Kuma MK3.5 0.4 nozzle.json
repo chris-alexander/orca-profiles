@@ -1,0 +1,31 @@
+{
+    "bed_custom_model": "C:\\Users\\chris\\AppData\\Roaming\\OrcaSlicer\\assets\\bed\\bed_220x220_with_tab.stl",
+    "bed_custom_texture": "C:\\Users\\chris\\AppData\\Roaming\\OrcaSlicer\\assets\\bed\\bed_220x220_grid.svg",
+    "before_layer_change_gcode": ";BEFORE_LAYER_CHANGE\n;[layer_z]\nG92 E0\nBEFORE_LAYER_CHANGE HEIGHT=[layer_z] LAYER=[layer_num]",
+    "from": "User",
+    "gcode_flavor": "klipper",
+    "host_type": "octoprint",
+    "inherits": "Prusa MK3.5 0.4 nozzle",
+    "is_custom_defined": "0",
+    "layer_change_gcode": ";AFTER_LAYER_CHANGE\n;[layer_z]\nAFTER_LAYER_CHANGE",
+    "machine_end_gcode": "PRINT_END",
+    "machine_pause_gcode": "PAUSE",
+    "machine_start_gcode": "M190 S0 ; Remove this if autoemit_temperature_commands is off in Prusa Slicer 2.6 and later\nM109 S0 ; Remove this if autoemit_temperature_commands is off in Prusa Slicer 2.6 and later\n_PRINT_START_PHASE_INIT EXTRUDER={first_layer_temperature[0]} BED=[first_layer_bed_temperature] MESH_MIN={first_layer_print_min[0]},{first_layer_print_min[1]} MESH_MAX={first_layer_print_max[0]},{first_layer_print_max[1]} LAYERS={total_layer_count} NOZZLE_SIZE={nozzle_diameter[0]}\n; Insert custom gcode here.\n_PRINT_START_PHASE_PREHEAT\n; Insert custom gcode here.\n_PRINT_START_PHASE_PROBING\n; Insert custom gcode here.\n_PRINT_START_PHASE_EXTRUDER\n; Insert custom gcode here.\n_PRINT_START_PHASE_PURGE\n\n; This is the place to put slicer purge lines if you haven't set a non-zero\n; variable_start_purge_length to have START_PRINT automatically calculate and \n; perform the purge (e.g. if using a Mosaic Palette, which requires the slicer\n; to generate the purge)",
+    "name": "Kuma MK3.5 0.4 nozzle",
+    "print_host": "192.168.1.40",
+    "printable_area": [
+        "0x0",
+        "220x0",
+        "220x220",
+        "0x220"
+    ],
+    "printer_settings_id": "Kuma MK3.5 0.4 nozzle",
+    "retract_lift_above": [
+        "0.25"
+    ],
+    "retract_lift_below": [
+        "209"
+    ],
+    "thumbnails": "48x48/PNG, 300x300/PNG",
+    "version": "1.4.4.0"
+}
