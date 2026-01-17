@@ -21,6 +21,32 @@ else
   ORCA_BACKUPS="$HOME/.config/OrcaSlicer/backups"
 fi
 
+# Bed asset filenames tracked in repo
+BED_MODEL_NAME="bed_220x220_with_tab.stl"
+BED_TEXTURE_NAME="bed_220x220_grid.svg"
+
+patch_machine_presets () {
+  local machine_dir="$1"
+  local assets_bed="$2"
+
+  local model_path="$assets_bed/$BED_MODEL_NAME"
+  local texture_path="$assets_bed/$BED_TEXTURE_NAME"
+
+  [[ -d "$machine_dir" ]] || return 0
+
+  for f in "$machine_dir"/*.json; do
+    [[ -f "$f" ]] || continue
+
+    if grep -q '"bed_custom_model"' "$f" || grep -q '"bed_custom_texture"' "$f"; then
+      perl -0777 -pe \
+        's/"bed_custom_model"\s*:\s*"[^"]*"/"bed_custom_model": "'"$model_path"'"/g;
+         s/"bed_custom_texture"\s*:\s*"[^"]*"/"bed_custom_texture": "'"$texture_path"'"/g;' \
+        -i "$f"
+      echo "Patched bed asset paths in: $(basename "$f")"
+    fi
+  done
+}
+
 echo "Repo root: $REPO_ROOT"
 echo "Orca presets: $ORCA_DEFAULT"
 echo "Orca bed assets: $ORCA_ASSETS_BED"
@@ -59,5 +85,8 @@ cp -f "$REPO_ROOT/profiles/process/"*.info "$ORCA_DEFAULT/process/" 2>/dev/null 
 cp -f "$REPO_ROOT/assets/bed/"*.stl "$ORCA_ASSETS_BED/" 2>/dev/null || true
 cp -f "$REPO_ROOT/assets/bed/"*.svg "$ORCA_ASSETS_BED/" 2>/dev/null || true
 cp -f "$REPO_ROOT/assets/bed/"*.scad "$ORCA_ASSETS_BED/" 2>/dev/null || true
+
+echo "Patching machine preset bed asset paths..."
+patch_machine_presets "$ORCA_DEFAULT/machine" "$ORCA_ASSETS_BED"
 
 echo "Done. Restart OrcaSlicer."
