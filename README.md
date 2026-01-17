@@ -96,7 +96,7 @@ Backups:
 ## Workflow (recommended)
 
 ### Update profiles (any machine)
-1) Make changes in OrcaSlicer  
+1) Make changes in OrcaSlicer
 2) Export from OrcaSlicer into repo (prints git diff preview):
 
 Windows:
@@ -121,12 +121,12 @@ macOS/Linux:
 ./scripts/unix/export.sh --prune
 ```
 
-3) Commit and push  
+3) Commit and push
 
 ---
 
 ### Install profiles (any machine)
-1) Pull latest changes  
+1) Pull latest changes
 2) Install presets + bed assets into OrcaSlicer:
 
 Windows:
@@ -149,11 +149,13 @@ Windows:
 .\scripts\windows\install.ps1 -NoBackup
 ```
 
-3) Launch OrcaSlicer and verify presets appear  
+3) Launch OrcaSlicer and verify presets appear
 
 ---
 
 ## Safety notes
+
+Note: Printer profiles are tuned to my specific hardware; use at your own risk.
 
 - Do not run export/install while OrcaSlicer is open.
 - Export scripts print a git diff preview — treat the repo as the source of truth.
