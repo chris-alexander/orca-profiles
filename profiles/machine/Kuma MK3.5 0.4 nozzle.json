@@ -1,6 +1,6 @@
-{
-    "bed_custom_model": "C:\\Users\\chris\\AppData\\Roaming\\OrcaSlicer\\assets\\bed\\bed_220x220_with_tab.stl",
-    "bed_custom_texture": "C:\\Users\\chris\\AppData\\Roaming\\OrcaSlicer\\assets\\bed\\bed_220x220_grid.svg",
+﻿{
+    "bed_custom_model": "C:\\\\Users\\\\chris\\\\AppData\\\\Roaming\\\\OrcaSlicer\\\\assets\\\\bed\\\\bed_220x220_with_tab.stl",
+    "bed_custom_texture": "C:\\\\Users\\\\chris\\\\AppData\\\\Roaming\\\\OrcaSlicer\\\\assets\\\\bed\\\\bed_220x220_grid.svg",
     "before_layer_change_gcode": ";BEFORE_LAYER_CHANGE\n;[layer_z]\nG92 E0\nBEFORE_LAYER_CHANGE HEIGHT=[layer_z] LAYER=[layer_num]",
     "from": "User",
     "gcode_flavor": "klipper",
@@ -29,3 +29,4 @@
     "thumbnails": "48x48/PNG, 300x300/PNG",
     "version": "1.4.4.0"
 }
+
