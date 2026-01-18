@@ -1,0 +1,8 @@
+{
+  "from": "User",
+  "inherits": "0.15mm Standard @MK3.5",
+  "is_custom_defined": "0",
+  "name": "0.15mm Quality @Kuma3.5",
+  "print_settings_id": "0.15mm Quality @Kuma3.5",
+  "version": "2.2.0.4"
+}

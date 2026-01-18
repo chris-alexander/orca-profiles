@@ -1,0 +1,8 @@
+{
+  "from": "User",
+  "inherits": "0.20mm Speed @MK3.5",
+  "is_custom_defined": "0",
+  "name": "0.20mm Speed @Kuma3.5",
+  "print_settings_id": "0.20mm Speed @Kuma3.5",
+  "version": "2.2.0.4"
+}
